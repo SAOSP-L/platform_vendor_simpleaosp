@@ -11,6 +11,8 @@ BOARD_SEPOLICY_UNION += \
     file_contexts \
     seapp_contexts \
     shell.te \
+    property_contexts \
+    property.te \
     system.te \
     app.te \
     bootanim.te \

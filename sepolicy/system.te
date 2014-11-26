@@ -7,3 +7,6 @@ allow system_server theme_data_file:dir create_dir_perms;
 allow system_server theme_data_file:file create_file_perms;
 allow system_server resourcecache_data_file:dir create_dir_perms;
 allow system_server resourcecache_data_file:file create_file_perms;
+
+# allow adb related properties to be set
+allow system_server adbtcp_prop:property_service set;
