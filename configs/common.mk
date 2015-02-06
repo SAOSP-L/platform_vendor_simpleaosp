@@ -1,3 +1,18 @@
+# Copyright (C) 2015 SimpleAOSP Project
+# Copyright (C) 2015 ParanoidAndroid Project
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
 # Brand
 PRODUCT_BRAND ?= simpleaosp
 
@@ -71,10 +86,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/addon.d/50-simpleaosp.sh:system/addon.d/50-simpleaosp.sh \
     $(LOCAL_PATH)/bin/backuptool.functions:system/bin/backuptool.functions \
     $(LOCAL_PATH)/bin/backuptool.sh:system/bin/backuptool.sh
-
-# Bootanimation support
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/media/bootanimation.zip:system/media/bootanimation.zip
     
 # Bootanimation enhancements
 TARGET_BOOTANIMATION_PRELOAD := true
@@ -90,8 +101,28 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/lib/mediadrm/libdrmclearkeyplugin.so:system/vendor/lib/mediadrm/libdrmclearkeyplugin.so \
     $(LOCAL_PATH)/lib/mediadrm/libwvdrmengine.so:system/vendor/lib/mediadrm/libwvdrmengine.so
 
-# Include extra items
-include vendor/simpleaosp/configs/extras.mk
+# Get the right bootanimation for each device
+ifneq ($(filter saosp_flo,$(TARGET_PRODUCT)),)
+PRODUCT_BOOTANIMATION := $(LOCAL_PATH)/media/flo-bootanimation.zip
+endif
 
-# Include bootanimation mk file
-include vendor/simpleaosp/configs/bootanimation.mk
+ifneq ($(filter saosp_flounder,$(TARGET_PRODUCT)),)
+PRODUCT_BOOTANIMATION := $(LOCAL_PATH)/media/flounder-bootanimation.zip
+endif
+
+ifneq ($(filter saosp_hammerhead,$(TARGET_PRODUCT)),)
+PRODUCT_BOOTANIMATION := $(LOCAL_PATH)/media/hammerhead-bootanimation.zip
+endif
+
+ifneq ($(filter saosp_mako,$(TARGET_PRODUCT)),)
+PRODUCT_BOOTANIMATION := $(LOCAL_PATH)/media/mako-bootanimation.zip
+endif
+
+ifneq ($(filter saosp_shamu,$(TARGET_PRODUCT)),)
+PRODUCT_BOOTANIMATION := $(LOCAL_PATH)/media/shamu-bootanimation.zip
+endif
+
+# Include chromium prebuilt if opted in
+ifeq ($(PRODUCT_PREBUILT_WEBVIEWCHROMIUM),yes)
+include prebuilts/chromium/$(TARGET_DEVICE)/chromium_prebuilt.mk
+endif
