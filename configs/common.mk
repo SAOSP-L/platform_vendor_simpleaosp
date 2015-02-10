@@ -75,6 +75,11 @@ PRODUCT_COPY_FILES += \
 # Bootanimation support
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/media/bootanimation.zip:system/media/bootanimation.zip
+    
+# Bootanimation enhancements
+TARGET_BOOTANIMATION_PRELOAD := true
+TARGET_BOOTANIMATION_TEXTURE_CACHE := true
+TARGET_BOOTANIMATION_USE_RGB565 := true
 
 # T-Mobile theme engine
  include vendor/simpleaosp/configs/themes_common.mk
@@ -87,4 +92,3 @@ PRODUCT_COPY_FILES += \
 
 # Include extra items
 include vendor/simpleaosp/configs/extras.mk
-
