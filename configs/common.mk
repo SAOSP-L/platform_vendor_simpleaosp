@@ -56,3 +56,9 @@ PRODUCT_COPY_FILES += \
 
 # T-Mobile theme engine
  include vendor/simpleaosp/configs/themes_common.mk
+
+# Add few DRM libs
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/lib/drm/libdrmwvmplugin.so:system/vendor/lib/drm/libdrmwvmplugin.so \
+    $(LOCAL_PATH)/lib/mediadrm/libdrmclearkeyplugin.so:system/vendor/lib/mediadrm/libdrmclearkeyplugin.so \
+    $(LOCAL_PATH)/lib/mediadrm/libwvdrmengine.so:system/vendor/lib/mediadrm/libwvdrmengine.so
