@@ -5,7 +5,7 @@ $(call inherit-product, device/htc/flounder/aosp_flounder.mk)
 $(call inherit-product, vendor/simpleaosp/configs/common.mk)
 
 # Setup device specific product configuration
-PRODUCT_NAME := simpleaosp_flounder
+PRODUCT_NAME := saosp_flounder
 PRODUCT_BRAND := google
 PRODUCT_DEVICE := flounder
 PRODUCT_MODEL := Nexus 9
