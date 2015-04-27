@@ -19,7 +19,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.facelock.rec_timeout=2500 \
     ro.facelock.lively_timeout=2500 \
     ro.facelock.est_max_time=600 \
-    ro.facelock.use_intro_anim=false
+    ro.facelock.use_intro_anim=false \
+    dalvik.vm.image-dex2oat-filter=everything \
+    dalvik.vm.dex2oat-filter=everything
 
 # Common overlays
 PRODUCT_PACKAGE_OVERLAYS += vendor/simpleaosp/overlays/common
