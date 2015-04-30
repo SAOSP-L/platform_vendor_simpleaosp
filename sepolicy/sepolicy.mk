@@ -10,6 +10,7 @@ BOARD_SEPOLICY_UNION += \
     mediaserver.te \
     file_contexts \
     seapp_contexts \
+    shell.te \
     system.te \
     app.te \
     bootanim.te \
