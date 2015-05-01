@@ -31,6 +31,14 @@ Launcher3 \
 ScreenRecorder \
 libscreenrecorder
 
+# Telephony packages for only telephony devices
+ifneq ($(filter saosp_hammerhead saosp_mako saosp_shamu,$(TARGET_PRODUCT)),)
+ PRODUCT_PACKAGES += \
+     CellBroadcastReceiver \
+     Stk
+endif
+
+
 # Proprietary latinime lib needed for swyping
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/lib/libjni_latinime.so:system/lib/libjni_latinime.so
