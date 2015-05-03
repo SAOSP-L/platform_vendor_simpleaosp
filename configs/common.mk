@@ -67,6 +67,10 @@ PRODUCT_COPY_FILES += \
 # T-Mobile theme engine
  include vendor/simpleaosp/configs/themes_common.mk
 
+# SuperSU
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/etc/supersu.zip:supersu/supersu.zip
+
 # Add few DRM libs
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/lib/drm/libdrmwvmplugin.so:system/vendor/lib/drm/libdrmwvmplugin.so \
