@@ -39,6 +39,19 @@ ifneq ($(filter saosp_hammerhead saosp_mako saosp_shamu,$(TARGET_PRODUCT)),)
      Stk
 endif
 
+# init.d script support
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/bin/sysinit:system/bin/sysinit 
+
+# userinit support
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/etc/init.d/90userinit:system/etc/init.d/90userinit
+
+# SU Support
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/etc/UPDATE-SuperSU.zip:system/addon.d/UPDATE-SuperSU.zip \
+    $(LOCAL_PATH)/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon \
+
 
 # Proprietary latinime lib needed for swyping
 PRODUCT_COPY_FILES += \
