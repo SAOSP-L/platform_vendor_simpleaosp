@@ -47,6 +47,12 @@ ScreenRecorder \
 libscreenrecorder \
 Trebuchet
 
+# CM Platform Library
+PRODUCT_PACKAGES += \
+    org.cyanogenmod.platform-res \
+    org.cyanogenmod.platform \
+    org.cyanogenmod.platform.xml
+
 # Telephony packages for only telephony devices
 ifneq ($(filter saosp_hammerhead saosp_mako saosp_shamu,$(TARGET_PRODUCT)),)
  PRODUCT_PACKAGES += \
