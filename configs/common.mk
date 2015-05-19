@@ -92,3 +92,6 @@ PRODUCT_COPY_FILES += \
 
 # Include extra items
 include vendor/simpleaosp/configs/extras.mk
+
+# Include bootanimation mk file
+include vendor/simpleaosp/configs/bootanimation.mk
