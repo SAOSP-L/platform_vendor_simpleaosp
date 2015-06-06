@@ -43,9 +43,9 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/simpleaosp/overlays/common
 # Needed Packages
 PRODUCT_PACKAGES += \
 LockClock \
-Launcher3 \
 ScreenRecorder \
-libscreenrecorder
+libscreenrecorder \
+Trebuchet
 
 # Telephony packages for only telephony devices
 ifneq ($(filter saosp_hammerhead saosp_mako saosp_shamu,$(TARGET_PRODUCT)),)
