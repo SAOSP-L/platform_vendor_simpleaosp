@@ -12,4 +12,4 @@ PRODUCT_MODEL := Nexus 9
 PRODUCT_MANUFACTURER := htc
 
 # Build prop fingerprint overrides
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME="volantis" BUILD_FINGERPRINT="google/volantis/flounder:5.1.1/LMY48B/1863243:user/release-keys" PRIVATE_BUILD_DESC="volantis-user 5.1.1 LMY48B 1863243release-keys"
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME="volantis" BUILD_FINGERPRINT="google/volantis/flounder:5.1.1/LYZ28E/1914015:user/release-keys" PRIVATE_BUILD_DESC="volantis-user 5.1.1 LYZ28E 1914015 release-keys"
