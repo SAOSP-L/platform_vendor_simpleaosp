@@ -12,4 +12,4 @@ PRODUCT_MODEL := Nexus 7
 PRODUCT_MANUFACTURER := ASUS
 
 # Build prop fingerprint overrides
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME="razor" BUILD_FINGERPRINT="google/razor/flo:5.1.1/LYZ28E/1914015:user/release-keys" PRIVATE_BUILD_DESC="razor-user 5.1.1 LYZ28E 1914015 release-keys"
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME="razor" BUILD_FINGERPRINT="google/razor/flo:5.1.1/LMY48I/1914015:user/release-keys" PRIVATE_BUILD_DESC="razor-user 5.1.1 LMY48I 1914015 release-keys"
